@@ -1,0 +1,531 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BookStore - Your Online Book Paradise</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="logo">
+                <i class="fas fa-book"></i>
+                <span>BookStore</span>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="#home" class="nav-link">Home</a></li>
+                <li><a href="#about" class="nav-link">About</a></li>
+                <li><a href="#products" class="nav-link">Books</a></li>
+                <li><a href="#gallery" class="nav-link">Gallery</a></li>
+                <li><a href="#contact" class="nav-link">Contact</a></li>
+            </ul>
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Home Section -->
+    <section id="home" class="hero">
+        <div class="hero-content">
+            <div class="hero-badge"> Welcome to BookStore</div>
+            <h1>Discover a World of <span class="gradient-text">Stories & Knowledge</span></h1>
+            <p>Explore thousands of books across multiple genres. Your next favorite read is just a click away!</p>
+            <div class="button-group">
+                <button class="cta-button" onclick="smoothScroll('#products')">Explore Books</button>
+                <button class="cta-button secondary" onclick="smoothScroll('#contact')">Get In Touch</button>
+            </div>
+            <div class="hero-stats">
+                <div class="hero-stat-item">
+                    <span class="stat-number">50K+</span>
+                    <span class="stat-label">Books</span>
+                </div>
+                <div class="hero-stat-item">
+                    <span class="stat-number">100K+</span>
+                    <span class="stat-label">Readers</span>
+                </div>
+                <div class="hero-stat-item">
+                    <span class="stat-number">24/7</span>
+                    <span class="stat-label">Support</span>
+                </div>
+            </div>
+        </div>
+        <div class="hero-image">
+            <div class="hero-circle-1"></div>
+            <div class="hero-circle-2"></div>
+            <div class="hero-circle-3"></div>
+            <img src="https://images.unsplash.com/photo-1512820790803-83ca734da794?w=500&q=80" alt="Books" class="hero-book-image">
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about">
+        <div class="container">
+            <h2>About Our BookStore</h2>
+            <div class="about-content">
+                <div class="about-text">
+                    <h3>Your Gateway to Literature</h3>
+                    <p>BookStore is your one-stop destination for thousands of books across multiple genres. Whether you're looking for classic literature, contemporary fiction, educational materials, or non-fiction works, we have something for everyone.</p>
+                    <ul class="features-list">
+                        <li><i class="fas fa-check"></i> Extensive Collection of Books</li>
+                        <li><i class="fas fa-check"></i> Fast & Secure Delivery</li>
+                        <li><i class="fas fa-check"></i> 24/7 Customer Support</li>
+                        <li><i class="fas fa-check"></i> Competitive Prices</li>
+                    </ul>
+                </div>
+                <div class="about-stats">
+                    <div class="stat">
+                        <h4>50,000+</h4>
+                        <p>Books Available</p>
+                    </div>
+                    <div class="stat">
+                        <h4>100,000+</h4>
+                        <p>Happy Customers</p>
+                    </div>
+                    <div class="stat">
+                        <h4>20+</h4>
+                        <p>Years Experience</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Products/Books Section -->
+    <section id="products" class="products">
+        <div class="container">
+            <h2>Featured Books</h2>
+            <div class="filter-buttons">
+                <button class="filter-btn active" data-filter="all">All</button>
+                <button class="filter-btn" data-filter="fiction">Fiction</button>
+                <button class="filter-btn" data-filter="non-fiction">Non-Fiction</button>
+                <button class="filter-btn" data-filter="education">Education</button>
+            </div>
+            <div class="books-grid">
+                <!-- Book 1 -->
+                <div class="book-card" data-category="fiction">
+                    <div class="book-badge">Featured</div>
+                    <div class="book-image">
+                        <img src="https://images.unsplash.com/photo-1630343710506-89f8b9f21d31?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NTF8fGJvb2tzfGVufDB8fDB8fHww" alt="The Great Gatsby">
+                    </div>
+                    <h3>The Great Gatsby</h3>
+                    <p class="author">by F. Scott Fitzgerald</p>
+                    <p class="category">Fiction</p>
+                    <div class="rating">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star-half-alt"></i>
+                        <span>(4.8)</span>
+                    </div>
+                    <p class="price">$12.99</p>
+                    <button class="add-to-cart">Add to Cart</button>
+                </div>
+
+                <!-- Book 2 -->
+                <div class="book-card" data-category="non-fiction">
+                    <div class="book-badge bestseller">Bestseller</div>
+                    <div class="book-image">
+                        <img src="https://images.unsplash.com/photo-1470071459604-3b5ec3a7fe05?q=80&w=1274&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Sapiens">
+                    </div>
+                    <h3>Sapiens</h3>
+                    <p class="author">by Yuval Noah Harari</p>
+                    <p class="category">Non-Fiction</p>
+                    <div class="rating">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <span>(4.9)</span>
+                    </div>
+                    <p class="price">$18.99</p>
+                    <button class="add-to-cart">Add to Cart</button>
+                </div>
+
+                <!-- Book 3 -->
+                <div class="book-card" data-category="fiction">
+                    <div class="book-image">
+                        <img src="https://images.unsplash.com/photo-1734630155396-2c476389a948?q=80&w=1025&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="To Kill a Mockingbird">
+                    </div>
+                    <h3>To Kill a Mockingbird</h3>
+                    <p class="author">by Harper Lee</p>
+                    <p class="category">Fiction</p>
+                    <div class="rating">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star-half-alt"></i>
+                        <span>(4.8)</span>
+                    </div>
+                    <p class="price">$14.99</p>
+                    <button class="add-to-cart">Add to Cart</button>
+                </div>
+
+                <!-- Book 4 -->
+                <div class="book-card" data-category="education">
+                    <div class="book-badge">Must Read</div>
+                    <div class="book-image">
+                        <img src="https://images.unsplash.com/photo-1517694712202-14dd9538aa97?w=400&h=600&q=80" alt="Clean Code">
+                    </div>
+                    <h3>Clean Code</h3>
+                    <p class="author">by Robert C. Martin</p>
+                    <p class="category">Education</p>
+                    <div class="rating">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <span>(4.7)</span>
+                    </div>
+                    <p class="price">$32.99</p>
+                    <button class="add-to-cart">Add to Cart</button>
+                </div>
+
+                <!-- Book 5 -->
+                <div class="book-card" data-category="fiction">
+                    <div class="book-badge bestseller">Popular</div>
+                    <div class="book-image">
+                        <img src="https://images.unsplash.com/photo-1591884641348-53ae55cb789a?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTJ8fDE5ODR8ZW58MHx8MHx8fDA%3D" alt="1984">
+                    </div>
+                    <h3>1984</h3>
+                    <p class="author">by George Orwell</p>
+                    <p class="category">Fiction</p>
+                    <div class="rating">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star-half-alt"></i>
+                        <span>(4.6)</span>
+                    </div>
+                    <p class="price">$13.99</p>
+                    <button class="add-to-cart">Add to Cart</button>
+                </div>
+
+                <!-- Book 6 -->
+                <div class="book-card" data-category="non-fiction">
+                    <div class="book-badge bestseller">Bestseller</div>
+                    <div class="book-image">
+                        <img src="https://images.unsplash.com/photo-1686764288887-dae4e7d50d58?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Nnx8YXRvbWljJTIwaGFiaXRzfGVufDB8fDB8fHww" alt="Atomic Habits">
+                    </div>
+                    <h3>Atomic Habits</h3>
+                    <p class="author">by James Clear</p>
+                    <p class="category">Non-Fiction</p>
+                    <div class="rating">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <span>(4.9)</span>
+                    </div>
+                    <p class="price">$16.99</p>
+                    <button class="add-to-cart">Add to Cart</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Gallery Section -->
+    <section id="gallery" class="gallery">
+        <div class="container">
+            <h2>Why Choose BookStore?</h2>
+            <div class="gallery-grid">
+                <div class="gallery-item">
+                    <div class="icon-circle">
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <h3>Curated Collection</h3>
+                    <p>Hand-picked selection of bestsellers and hidden gems</p>
+                </div>
+                <div class="gallery-item">
+                    <div class="icon-circle">
+                        <i class="fas fa-shipping-fast"></i>
+                    </div>
+                    <h3>Fast Shipping</h3>
+                    <p>Quick and reliable delivery service worldwide</p>
+                </div>
+                <div class="gallery-item">
+                    <div class="icon-circle">
+                        <i class="fas fa-lock"></i>
+                    </div>
+                    <h3>Secure Payment</h3>
+                    <p>Safe and encrypted transactions for peace of mind</p>
+                </div>
+                <div class="gallery-item">
+                    <div class="icon-circle">
+                        <i class="fas fa-users"></i>
+                    </div>
+                    <h3>Community</h3>
+                    <p>Join thousands of book lovers worldwide</p>
+                </div>
+                <div class="gallery-item">
+                    <div class="icon-circle">
+                        <i class="fas fa-award"></i>
+                    </div>
+                    <h3>Quality Guaranteed</h3>
+                    <p>Premium quality books with satisfaction guarantee</p>
+                </div>
+                <div class="gallery-item">
+                    <div class="icon-circle">
+                        <i class="fas fa-headset"></i>
+                    </div>
+                    <h3>Expert Support</h3>
+                    <p>24/7 customer service from book enthusiasts</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Featured Authors Section -->
+    <section class="featured-authors">
+        <div class="container">
+            <h2>Featured Authors</h2>
+            <div class="authors-grid">
+                <div class="author-card">
+                    <div class="author-avatar">
+                        <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=300&h=300&fit=crop" alt="F. Scott Fitzgerald">
+                    </div>
+                    <h3>F. Scott Fitzgerald</h3>
+                    <p class="author-genre">Fiction, Classics</p>
+                    <p class="author-bio">Legendary American author known for timeless classics</p>
+                    <div class="author-books">5+ Books</div>
+                </div>
+                <div class="author-card">
+                    <div class="author-avatar">
+                        <img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=300&h=300&fit=crop" alt="Yuval Noah Harari">
+                    </div>
+                    <h3>Yuval Noah Harari</h3>
+                    <p class="author-genre">Non-Fiction, History</p>
+                    <p class="author-bio">Best-selling author exploring human history and society</p>
+                    <div class="author-books">8+ Books</div>
+                </div>
+                <div class="author-card">
+                    <div class="author-avatar">
+                        <img src="https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?w=300&h=300&fit=crop" alt="James Clear">
+                    </div>
+                    <h3>James Clear</h3>
+                    <p class="author-genre">Non-Fiction, Self-Help</p>
+                    <p class="author-bio">Transform your life with science-backed insights</p>
+                    <div class="author-books">6+ Books</div>
+                </div>
+                <div class="author-card">
+                    <div class="author-avatar">
+                        <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=300&h=300&fit=crop" alt="Harper Lee">
+                    </div>
+                    <h3>Harper Lee</h3>
+                    <p class="author-genre">Fiction, Classics</p>
+                    <p class="author-bio">Pulitzer Prize winner with profound storytelling</p>
+                    <div class="author-books">4+ Books</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section class="testimonials">
+        <div class="container">
+            <h2>What Our Readers Say</h2>
+            <div class="testimonials-grid">
+                <div class="testimonial-card">
+                    <div class="testimonial-rating">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <p class="testimonial-text">"Excellent selection and fast delivery! BookStore has become my go-to place for all my reading needs."</p>
+                    <div class="testimonial-author">
+                        <div class="testimonial-avatar">
+                            <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=150&h=150&fit=crop" alt="Sarah Johnson">
+                        </div>
+                        <div>
+                            <p class="author-name">Sarah Johnson</p>
+                            <p class="author-title">Book Enthusiast</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial-card">
+                    <div class="testimonial-rating">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <p class="testimonial-text">"The customer service is outstanding! They helped me find the perfect book recommendations."</p>
+                    <div class="testimonial-author">
+                        <div class="testimonial-avatar">
+                            <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=150&h=150&fit=crop" alt="Michael Chen">
+                        </div>
+                        <div>
+                            <p class="author-name">Michael Chen</p>
+                            <p class="author-title">Avid Reader</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial-card">
+                    <div class="testimonial-rating">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star-half-alt"></i>
+                    </div>
+                    <p class="testimonial-text">"Love the variety of books available and the competitive prices. Highly recommended!"</p>
+                    <div class="testimonial-author">
+                        <div class="testimonial-avatar">
+                            <img src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=150&h=150&fit=crop" alt="Emma Wilson">
+                        </div>
+                        <div>
+                            <p class="author-name">Emma Wilson</p>
+                            <p class="author-title">Literature Lover</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <div class="container">
+            <h2>Get In Touch</h2>
+            <div class="contact-content">
+                <div class="contact-info">
+                    <div class="info-item">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <div>
+                            <h3>Address</h3>
+                            <p>123 Book Street, Library City, BC 12345</p>
+                        </div>
+                    </div>
+                    <div class="info-item">
+                        <i class="fas fa-phone"></i>
+                        <div>
+                            <h3>Phone</h3>
+                            <p>+1 (555) 123-4567</p>
+                        </div>
+                    </div>
+                    <div class="info-item">
+                        <i class="fas fa-envelope"></i>
+                        <div>
+                            <h3>Email</h3>
+                            <p>info@bookstore.com</p>
+                        </div>
+                    </div>
+                </div>
+
+                <form id="contactForm" class="contact-form">
+                    <div class="form-group">
+                        <label for="name">Full Name *</label>
+                        <input type="text" id="name" name="name" required>
+                        <span class="error-message" id="nameError"></span>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="email">Email Address *</label>
+                        <input type="email" id="email" name="email" required>
+                        <span class="error-message" id="emailError"></span>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="phone">Phone Number</label>
+                        <input type="tel" id="phone" name="phone">
+                        <span class="error-message" id="phoneError"></span>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="password">Password *</label>
+                        <div class="password-input-group">
+                            <input type="password" id="password" name="password" required>
+                            <span class="toggle-password" id="togglePassword">
+                                <i class="fas fa-eye"></i>
+                            </span>
+                        </div>
+                        <div class="password-strength-meter">
+                            <div class="password-strength-bar" id="passwordStrengthBar"></div>
+                        </div>
+                        <div class="password-strength-text" id="passwordStrengthText"></div>
+                        <span class="error-message" id="passwordError"></span>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="confirmPassword">Confirm Password *</label>
+                        <div class="password-input-group">
+                            <input type="password" id="confirmPassword" name="confirmPassword" required>
+                            <span class="toggle-password" id="toggleConfirmPassword">
+                                <i class="fas fa-eye"></i>
+                            </span>
+                        </div>
+                        <span class="error-message" id="confirmPasswordError"></span>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="subject">Subject *</label>
+                        <input type="text" id="subject" name="subject" required>
+                        <span class="error-message" id="subjectError"></span>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="message">Message *</label>
+                        <textarea id="message" name="message" rows="5" required></textarea>
+                        <span class="error-message" id="messageError"></span>
+                    </div>
+
+                    <button type="submit" class="submit-btn">Send Message</button>
+                    <p class="form-success" id="formSuccess" style="display: none;">Thank you! Your message has been sent successfully.</p>
+                </form>
+            </div>
+        </div>
+    </section>
+
+
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>About BookStore</h3>
+                    <p>Your trusted online destination for books across all genres and interests.</p>
+                </div>
+                <div class="footer-section">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#about">About</a></li>
+                        <li><a href="#products">Books</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>Follow Us</h3>
+                    <div class="social-icons">
+                        <a href="#" title="Facebook"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" title="Twitter"><i class="fab fa-twitter"></i></a>
+                        <a href="#" title="Instagram"><i class="fab fa-instagram"></i></a>
+                        <a href="#" title="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="#" title="YouTube"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 BookStore. All rights reserved. | Privacy Policy | Terms & Conditions</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
